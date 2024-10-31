@@ -136,10 +136,13 @@ def function(calc):
             argument = 1
             calc[indx] = calc[indx].split()
             for i in range(1, len(calc[indx])):
-                if (len(calc[indx][i]) >= len(calc[indx][i-1])
-                    and calc[indx][i - 1] != 'минус'):
-                    print('Ошибка ввода')
-                    return True
+                try:
+                    if (len(str(dct[calc[indx][i]])) >=
+                        len(str(dct[calc[indx][i-1]]))):
+                        print('Ошибка ввода')
+                        return True
+                except KeyError:
+                    continue
             for num in calc[indx]:
                 if num in dct:
                     count += dct[num]
