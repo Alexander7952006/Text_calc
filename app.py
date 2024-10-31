@@ -1,6 +1,7 @@
 from fnmatch import fnmatch
 from math import factorial
 
+
 def function(calc):
     dct = {'ноль': 0, 'один': 1, 'два': 2, 'три': 3, 'четыре': 4, 'пять': 5,
            'шесть': 6, 'семь': 7, 'восемь': 8, 'девять': 9, 'десять': 10,
@@ -137,7 +138,8 @@ def function(calc):
             argument = 1
             calc[indx] = calc[indx].split()
             for i in range(1, len(calc[indx])):
-                if len(calc[indx][i]) >= len(calc[indx][i-1]):
+                if (len(calc[indx][i]) >= len(calc[indx][i-1])
+                    and calc[indx][i - 1] 1= 'минус'):
                     print('Ошибка ввода')
                     return True
             for num in calc[indx]:
