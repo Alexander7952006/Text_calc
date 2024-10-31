@@ -103,9 +103,7 @@ def function(calc):
                 print('Ошибка ввода')
         else:
             print('Ошибка ввода')
-                
-                
-            
+                   
     else:
         for indx in range(len(calc)):
             if indx == calc.find(' умножить на ', indx):
@@ -139,7 +137,7 @@ def function(calc):
             calc[indx] = calc[indx].split()
             for i in range(1, len(calc[indx])):
                 if (len(calc[indx][i]) >= len(calc[indx][i-1])
-                    and calc[indx][i - 1] 1= 'минус'):
+                    and calc[indx][i - 1] != 'минус'):
                     print('Ошибка ввода')
                     return True
             for num in calc[indx]:
